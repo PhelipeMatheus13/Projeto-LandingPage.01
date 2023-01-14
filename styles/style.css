@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+#degrade {
+  background: linear-gradient(450deg, #472183,#4B56D2,#82C3EC,#F1F6F5);/* background: url(/components/images/bg-1.png) no-repeat; */ /* fundo com a primeira imagem */
+  background-size: 300% 100%;
+  animation: colors 10s infinite alternate;
+}
+@keyframes colors {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:#3D3D3D;
+}
+header .logo img{
+  width: 200px;
+  height: 100%;
+}
+header .menu ul{
+  display: flex;
+}
+header .menu ul li{
+  list-style: none;
+  padding:  0 20px; 
+}
+header .menu ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.1rem;
+}
+header .menu ul li a:hover {
+  color: #4B56D2;
+  font-weight: bold;
+}
+/*     Main   */
+/*     Organizando o sobre nos div(container)  */
+#home .container { 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#home .container .left {
+  width: 40%;
+  height: 70vh;
+  display: flex;
+  align-items: flex-start; /*controla o alinhamento de todos os itens no eixo transversa */
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+#home .container .left h1{
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+#home .container .left p {
+  width: 400px;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  margin-top: 15px;
+}
+#home .container .left button{ /*arrumar botao*/
+  margin-top: 40px;
+  padding: 10px;
+  font-weight: 600px;
+  color: #4B56D2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* ---------Formulario de cadastro-------------  */
+#home .right .box{
+  margin-top: 80px;
+  width: 80%;  
+}
+#home .right .box .form-box{
+  background: rgb(255, 255, 255,0.4);
+  backdrop-filter: blur(40px); /* desfocando backgorund */
+  padding: 15px 15px;
+  border-radius: 20px 20px 20px 20px;
+}
+#home .right .box .form-box h2{
+  font-size: 30px ;
+  text-align: center;
+}
+#home .right .box .form-box p{
+  font-weight: bold;
+  color: #3D3D3D;
+  margin-top: 10px;
+}
+#home .right .box .form-box p a{
+  color: #4a75a6;
+  text-decoration: none;
+}
+#home .right .box .form-box .registration {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+#home .right .box .form-box .registration label{
+  color: #3D3D3D;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+#home .right .box .form-box .registration input{
+  width: 100%;
+  height: 47px;
+  background-color: rgb(255, 255, 255,0.32);
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 15px;
+  font-size: 15px;
+  color: #616161;
+  transition: all 0.4s ease;
+
+}
+#home .right .box .form-box .registration input:focus {
+  border: 2px solid;
+  border-color: #4a75a6;
+}
+#home .right .w50{
+  width: 50%;
+  float: left;
+  padding-right: 15px;
+  width: 50%;
+  border-radius: 20px 20px 20px 20px;
+}
+#home .right .box .form-box .registration button{
+  width: 100%;
+  height: 47px;
+  background: #4B56D2;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  color: #F1F6F5;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/*---------- Sobre ---------  */
+#about .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#about .container h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 15px;
+  border: 3px solid #4a75a6;
+  border-radius: 50%;
+  color: #4a75a6;
+}
+#about .container p {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;color: #4a75a6;
+}
+#about .container h1 {
+  margin-top: 60px;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #203758;
+}
+#about .container .info-01 {
+  width: 50%;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #203758;
+  text-align: justify;
+}
+#about .container img {
+  width: 400px;
+}
+
+/*---------- Novidades ---------  */
+#news .container{
+  width: 100%;
+  height: 100vh;
+  /* background: url(/components/images/bg-3.png) no-repeat; */  /* imagem sobre 3 parte do site "about-02" TROCAR  */
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#news .container .left{
+  width: 40%;
+  height: 40vh;
+}
+#news .container .left h2 {
+  width: max-content;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 15px;
+  border: 3px solid #f9fcff;
+  border-radius: 50%;
+  color: #f9fcff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  text-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+#news .container .left p{
+  margin-top: 10px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f9fcff;
+}
+#news .container .left h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #f9fcff;
+}
+#news .container .left span{
+  font-family: tahoma;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: #f9fcff;
+}
+
+/* ARRUMANDO AS BOXES */
+#news .container .right {
+  width: 25%;
+  height: 70vh;
+}
+#news .container .right h3{
+  background: rgba(255,255,255,0.6);
+  color: #203758;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 15px;
+  text-transform: uppercase;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+#news .container .right .box{
+  display: flex;
+  justify-content: flex-start; /* O item é deslocado para o início do eixo transversal */
+  align-items: center;
+  background: rgba(203,221,249,0.3);
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+#news .container .right .data {
+  padding: 20px;
+}
+#news .container .right .data span {
+  background: #f9fcff;
+  padding: 5px 15px;
+  color: #203758;
+  font-size: 0.9rem;
+}
+#news .container .right .data p {
+  padding: 15px;
+  border: 1px solid #f9fcff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #f9fcff;
+  border-radius: 5px;
+}
+#news .container .right .box .info-02 span{
+  color: #f9fcff;
+  font-weight: 700;
+  font-size: 1,1rem;
+}
+#news .container .right .box .info-02 {
+  color: #f9fcff;
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+/*---------- Contatos ---------  */
+
+#contacts .container {
+  width: 100%;
+  height: 100vh;
+  /* background: url(/components/images/bg-4.png) no-repeat; */
+  background-size: 100% 100%;
+}
+
+#contacts .container .center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+}
+#contacts .container .center h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: 3px solid #f9fcff;
+  border-radius: 50%;
+  color: #f9fcff;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  text-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+#contacts .container .center p{
+  margin: 10px;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f9fcff;
+}
+
+#contacts .container .center h1 {
+  margin-top: 30px;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #f9fcff;
+}
+#contacts .container .card {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+#contacts .container .card .box{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+#contacts .container .card .box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+#contacts .container .card .box h3 {
+  color: #f9fcff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+#contacts .container .card .box p {
+  color: #f9fcff;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
